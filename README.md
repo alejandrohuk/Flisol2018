@@ -1,27 +1,30 @@
-FRISoL 2017 UTN FRA
+FRISoL 2018 UTN FRA
+
+#14º Festival Latinoamericano de Instalación de Software Libre el 28 de abril 2018 
+
 ========================================
 Aplicaciones Híbridas 
 ========================================
 Prof. Octavio villegas  
 # Ionic View ID: #
-    *  85D37C42 
+    *   
 # Sitio firebase:  #
-    * https://flisol-46dc5.firebaseapp.com/ 
+    * 
 # Pre-requisitos #
 
  se debe tener instalado :
 
-* node.js (v6.9.1)  https://nodejs.org/es/
+* node.js (v10)  https://nodejs.org/es/
 * android SDK   https://developer.android.com/studio/index.html
 * Instalar IONIC http://ionicframework.com/getting-started/     
         npm install -g cordova ionic
 * Firebase tools    
-        npm install -g firebase-tools
+      
 
 
 ### Crear aplicaciones y verlas en un servidor ###
 
-* ionic start ejemploUno tabs --v2
+* ionic start 
 * ionic serve
 
 ### Agregarle una plataforma (android o ios) ###
