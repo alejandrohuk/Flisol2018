@@ -38,7 +38,7 @@ import {AngularFireModule} from 'angularfire2';
 import {AngularFirestoreModule} from 'angularfire2/
  ```
 si hay error...
-en el archivo  firebase.app.madule.d.ts  del node modules, agregar la linea marcada
+en el archivo en node_module/angularfire2/ firebase.app.module.d.ts  del node modules, agregar la linea marcada
 
 ```
 import { InjectionToken } from '@angular/core';
@@ -280,7 +280,7 @@ prompt.present();
 }
 ```
 
- ## habilitar la persistencia de datos. 
+ ## Habilitar la persistencia de datos. 
 
 en el module.ts
 
@@ -320,7 +320,7 @@ declarations: [
     ListPage
   ],
 ```
-3. hacer el pipe
+3. Hacer el pipe
 
 ```
 import { Pipe, PipeTransform } from '@angular/core';
@@ -387,4 +387,93 @@ export class TiempoDesdeAhoraPipe implements PipeTransform {
 }
 
 ```
+3. Usar el pipe
 
+```
+{{chat.tiempo| tiempoDesdeAhora  }}
+```
+
+
+## Estandarizar estilos con SASS. 
+
+
+Archivos
+```
+  app.scss
+  tupágina.scss
+  variables.scss
+```
+1.En theme/variables.scss:
+en este archivo podemos crear, modificar o importar varibles y funciones de  scss que van a modificar toda la aplicación.
+
+2. Modificar variables:
+
+  Aca estan nuestras variables
+```
+  https://ionicframework.com/docs/theming/overriding-ionic-variables/
+```
+
+modificamos los valores de algunas
+```
+$text-color:         blue !default;
+$link-color:         color($colors, light) !default;
+$toolbar-background: transparent !default;
+```
+
+
+3. Creamos variables:
+```
+https://ionicframework.com/docs/theming/sass-variables/
+https://github.com/ionic-team/ionic/blob/master/src/themes/ionic.theme.default.scss
+```
+  ej:
+
+```
+$control-height: 40px;
+```
+Despúes la usamos así:
+
+```
+  .header {
+    height: $control-height;
+  }
+
+  .sub-header {
+    height: $control-height;
+  }
+```
+
+
+4. Modificamos valores predeterminados de colores
+```
+https://ionicframework.com/docs/theming/theming-your-app/
+```
+
+Modificamos...
+```
+   $colors: (
+    primary:    #488aff,
+    secondary:  #32db64,
+    danger:     #f53d3d,
+    light:      #f4f4f4,
+    dark:       #222,
+    UTNFRA:   #00ffff,
+    UTNFRACmp: (
+        base:  #00ffff,
+        contrast: white
+      )
+    );
+```
+
+ después la usamos así:
+```
+<button ion-fab mini color ="UTNFRA" (click)="nuevoUsuario($event)"><ion-icon name="add"  ></ion-icon></button>
+```
+
+o así en el archivo scss de cualquier componente
+```
+tupágina
+  {
+  background: color($colors, UTNFRACmp, base);
+}
+```
