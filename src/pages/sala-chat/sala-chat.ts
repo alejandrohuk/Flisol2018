@@ -32,7 +32,7 @@ export class SalaChatPage {
 	     nuevoMensaje= new chat(mensaje);     
 	     let objetoJsonGenerico= nuevoMensaje.dameJSON();
 	     console.log (objetoJsonGenerico );
-	      //this.objFirebase.collection<chat>('chatTest').add({mensaje:nuevoMensaje.mensaje,usuario:nuevoMensaje.usuario,tiempo:Date()}).then(
+	     
 	      this.objFirebase.collection<chat>('chatTest').add(objetoJsonGenerico).then(
 	      Retorno=>
 	      {

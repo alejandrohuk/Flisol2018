@@ -11,6 +11,7 @@ export const environment = {
     databaseURL: "https://ionic2018-4f4ef.firebaseio.com",
     projectId: "ionic2018-4f4ef",
     storageBucket: '',
+     timestampsInSnapshots: true,
      messagingSenderId: "645548437433"
   }
 };
